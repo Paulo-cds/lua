@@ -513,6 +513,45 @@ header nav .menu li a {
   width: 100%;
 }
 
+.goTop {
+  position: fixed;
+  width: 4%;
+  bottom: 1%;
+  left: 1%;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+@media (min-width: 500px) and (max-width: 800px) {
+  .goTop {
+    width: 7%;
+  }
+}
+
+@media (max-width: 499px) {
+  .goTop {
+    width: 11%;
+  }
+}
+
+.goTop :hover {
+  cursor: pointer;
+}
+
+.goTop img {
+  width: 100%;
+  background: white;
+  border-radius: 100%;
+}
+
+.goTop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 #icon-whats {
   width: 5%;
   position: fixed;
