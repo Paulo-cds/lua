@@ -520,6 +520,18 @@ header nav .menu li a {
   z-index: 0;
 }
 
+@media (min-width: 500px) and (max-width: 800px) {
+  #icon-whats {
+    width: 8%;
+  }
+}
+
+@media (max-width: 499px) {
+  #icon-whats {
+    width: 12%;
+  }
+}
+
 footer {
   background-color: black;
   color: white;
