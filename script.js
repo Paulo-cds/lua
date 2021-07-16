@@ -49,6 +49,6 @@ window.addEventListener('scroll', function(){
     }
 })
 
-goTop.onclick = function() {
+goTop.onclick = function top() {
     window.scrollTo({top: 0,left: 0 , behavior: 'smooth'});
 }
