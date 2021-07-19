@@ -4,11 +4,11 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;    
-
+    scroll-behavior: smooth;
 }
 
 header{
-    background-image: url('./images/header.jpg');
+    background-image: url('./images/header.jpeg');
     background-size: cover;
 
     #cont_6ce78e5ec83ad30f7499954b4470e12c{
@@ -33,7 +33,7 @@ header{
 
     nav{
         
-        color: white;
+        color: black;
         width: 100%;
         height: 30rem;
         display: flex;
@@ -164,13 +164,19 @@ header{
             width: 60%;
 
             li a {
-                color: white;
-
-                :hover{
-                    background-color: black;
-                    
+                color: black;  
+                transition: all 500ms ease;
+                
+                
+                &:hover{
+                    background-color: rgba(24, 22, 22, 0.603);
+                    color: white;
+                    padding: .5rem;
+                    border-radius: 50%;
                 }
             }
+
+            
 
         }
 
@@ -256,7 +262,7 @@ header{
     background:#124981;
     
     h2{
-        margin: 2rem auto 0;
+        margin: 2rem auto 1rem;
         padding-top: 2rem;
         color: white;
     }
@@ -310,12 +316,14 @@ header{
             
             right: 1px;
             bottom: 1px;
-            width: 35%;                
+            width: 35%;   
+            height: 80%;
+            padding: 2% 0;             
             height: auto;
             margin: 0 auto;
 
             @media(max-width: 500px){
-                width: 90%;
+                width: 90%;                
                 order: 0;                           
             }
         }
@@ -411,10 +419,22 @@ header{
                 max-height: 4%;
 
 
+                @media(max-width:700px){                    
+                    justify-content: center;
+                }
+
+
                 .info {
                     display: flex;
                     align-items: center;
                     justify-content: space-around;
+
+                    @media(max-width: 700px){
+                        display: grid;
+                        place-items: center;
+                        vertical-align: middle;
+                        
+                    }
     
                     .icon{ 
 
@@ -423,12 +443,14 @@ header{
                         justify-content: space-between;
                         padding: 0 5%;                    
 
-                        @media(max-width:700px){
+                        @media (max-width:700px){
                             display: grid;
                             place-items: center;  
                             vertical-align: middle;
+                            
                         }
-                        
+
+                       
                         img{
                             display: flex;
                             align-items: center;
@@ -438,24 +460,39 @@ header{
                             height: 30%;
                             margin-right: 15px;
 
-                            @media(max-width:700px){
+                            @media (max-width:700px){
                                 width: 70%;
                                 height: auto; 
+                                display:none;
                             }
+                           
                         }   
 
                         
+
+                        
         
-                        .text span {
-                            display: block;
-                            font-size: 90%;
-                            padding: 0px;
-                            
-                            color: white;
-                        }
-                        
-                        
-                    }
+                        .text{ 
+                            @media(max-width:700px){
+                                margin: 2px auto;
+                                text-align: center;
+                                border: 1px solid black;
+                                width: 100%;
+                                padding: 10px;
+                                display: grid;
+                                place-items: center;  
+                                vertical-align: middle;
+                            }
+
+                            span {
+                                display: block;
+                                font-size: 90%;
+                                padding: 0px;
+                                
+                                color: white;
+                            }
+                        }                                                                                                   
+                    }                    
     
                     
                 }
@@ -476,7 +513,7 @@ header{
 
     .goTop{
         position: fixed;
-        width: 4%;
+        width: 2%;
         bottom: 1%;
         left: 1%;
         z-index: 99;
@@ -484,16 +521,16 @@ header{
         visibility: hidden;
         transition: all 1s ease;
 
-        :hover{
+        &:hover{
             cursor:pointer;
         }
 
         @media(min-width:500px) and  (max-width: 800px){
-            width: 7%;
+            width: 4%;
         }
 
         @media(max-width:499px){
-            width: 11%;
+            width: 7%;
         }
                         
 

@@ -6,10 +6,11 @@
           box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  scroll-behavior: smooth;
 }
 
 header {
-  background-image: url("./images/header.jpg");
+  background-image: url("./images/header.jpeg");
   background-size: cover;
 }
 
@@ -32,7 +33,7 @@ header #cont_f90575ba27d99bbf60bed007d5f33be9 {
 }
 
 header nav {
-  color: white;
+  color: black;
   width: 100%;
   height: 30rem;
   display: -webkit-box;
@@ -173,11 +174,16 @@ header nav .menu {
 }
 
 header nav .menu li a {
-  color: white;
+  color: black;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
 
-header nav .menu li a :hover {
-  background-color: black;
+header nav .menu li a:hover {
+  background-color: rgba(24, 22, 22, 0.603);
+  color: white;
+  padding: .5rem;
+  border-radius: 50%;
 }
 
 @media (max-width: 900px) {
@@ -266,7 +272,7 @@ header nav .menu li a :hover {
 }
 
 #services h2 {
-  margin: 2rem auto 0;
+  margin: 2rem auto 1rem;
   padding-top: 2rem;
   color: white;
 }
@@ -333,6 +339,8 @@ header nav .menu li a :hover {
   right: 1px;
   bottom: 1px;
   width: 35%;
+  height: 80%;
+  padding: 2% 0;
   height: auto;
   margin: 0 auto;
 }
@@ -447,6 +455,14 @@ header nav .menu li a :hover {
   max-height: 4%;
 }
 
+@media (max-width: 700px) {
+  #location .local .end {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 #location .local .end .info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -456,6 +472,15 @@ header nav .menu li a :hover {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+@media (max-width: 700px) {
+  #location .local .end .info {
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    vertical-align: middle;
+  }
 }
 
 #location .local .end .info .icon {
@@ -500,6 +525,21 @@ header nav .menu li a :hover {
   #location .local .end .info .icon img {
     width: 70%;
     height: auto;
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  #location .local .end .info .icon .text {
+    margin: 2px auto;
+    text-align: center;
+    border: 1px solid black;
+    width: 100%;
+    padding: 10px;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    vertical-align: middle;
   }
 }
 
@@ -520,7 +560,7 @@ header nav .menu li a :hover {
 
 .goTop {
   position: fixed;
-  width: 4%;
+  width: 2%;
   bottom: 1%;
   left: 1%;
   z-index: 99;
@@ -530,19 +570,19 @@ header nav .menu li a :hover {
   transition: all 1s ease;
 }
 
-.goTop :hover {
+.goTop:hover {
   cursor: pointer;
 }
 
 @media (min-width: 500px) and (max-width: 800px) {
   .goTop {
-    width: 7%;
+    width: 4%;
   }
 }
 
 @media (max-width: 499px) {
   .goTop {
-    width: 11%;
+    width: 7%;
   }
 }
 
