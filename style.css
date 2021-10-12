@@ -7,6 +7,7 @@
   text-decoration: none;
   list-style: none;
   scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -195,15 +196,22 @@ header nav .menu li a:hover {
   }
 }
 
-.about {
+.container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
 
-.about h2 {
+.container .about {
+  text-align: center;
+}
+
+.container .about h2 {
   margin: 2rem auto 0;
 }
 
-.about .about2 {
+.container .about .about2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,14 +223,14 @@ header nav .menu li a:hover {
 }
 
 @media (max-width: 500px) {
-  .about .about2 {
+  .container .about .about2 {
     display: -ms-grid;
     display: grid;
     place-items: center;
   }
 }
 
-.about .about2 .about-img {
+.container .about .about2 .about-img {
   width: 50%;
   display: -ms-grid;
   display: grid;
@@ -230,7 +238,7 @@ header nav .menu li a:hover {
 }
 
 @media (max-width: 500px) {
-  .about .about2 .about-img {
+  .container .about .about2 .about-img {
     margin: 2rem auto;
     width: 100%;
     -webkit-box-ordinal-group: 1;
@@ -239,12 +247,12 @@ header nav .menu li a:hover {
   }
 }
 
-.about .about2 .about-img img {
+.container .about .about2 .about-img img {
   width: 80%;
   position: relative;
 }
 
-.about .about2 .about-p {
+.container .about .about2 .about-p {
   width: 50%;
   display: -ms-grid;
   display: grid;
@@ -252,7 +260,7 @@ header nav .menu li a:hover {
 }
 
 @media (max-width: 500px) {
-  .about .about2 .about-p {
+  .container .about .about2 .about-p {
     width: 100%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -260,24 +268,50 @@ header nav .menu li a:hover {
   }
 }
 
-.about .about2 .about-p p {
+.container .about .about2 .about-p p {
   width: 80%;
   text-align: center;
   position: relative;
 }
 
-#services {
+.container .video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  background-image: url("https://wallpaper.dog/large/792876.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 15px 0;
+  margin: 4rem auto;
+}
+
+.container .video .play {
+  width: 80%;
+}
+
+.container #services {
   text-align: center;
   background: #124981;
 }
 
-#services h2 {
+.container #services h2 {
   margin: 2rem auto 1rem;
   padding-top: 2rem;
   color: white;
 }
 
-#services .services2 {
+.container #services .services2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -290,14 +324,14 @@ header nav .menu li a:hover {
 }
 
 @media (max-width: 500px) {
-  #services .services2 {
+  .container #services .services2 {
     display: -ms-grid;
     display: grid;
     place-items: center;
   }
 }
 
-#services .services2 .pergamin {
+.container #services .services2 .pergamin {
   background-image: url(./images/pergaminho.png);
   background-repeat: no-repeat;
   background-position-x: center;
@@ -309,7 +343,7 @@ header nav .menu li a:hover {
 }
 
 @media (max-width: 500px) {
-  #services .services2 .pergamin {
+  .container #services .services2 .pergamin {
     width: 90%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -317,7 +351,7 @@ header nav .menu li a:hover {
   }
 }
 
-#services .services2 .pergamin p {
+.container #services .services2 .pergamin p {
   width: 60%;
   max-height: 60%;
   position: relative;
@@ -335,7 +369,7 @@ header nav .menu li a:hover {
   overflow-x: hidden;
 }
 
-#services .services2 img {
+.container #services .services2 img {
   right: 1px;
   bottom: 1px;
   width: 35%;
@@ -346,7 +380,7 @@ header nav .menu li a:hover {
 }
 
 @media (max-width: 500px) {
-  #services .services2 img {
+  .container #services .services2 img {
     width: 90%;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
@@ -354,7 +388,7 @@ header nav .menu li a:hover {
   }
 }
 
-#island {
+.container #island {
   margin-top: 5%;
   width: 100%;
   height: -webkit-fit-content;
@@ -363,11 +397,11 @@ header nav .menu li a:hover {
   padding: 0 2rem;
 }
 
-#island h2, #island h3 {
+.container #island h2, .container #island h3 {
   text-align: center;
 }
 
-#island .cidade, #island .praias, #island .cachoeiras {
+.container #island .cidade, .container #island .praias, .container #island .cachoeiras {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -381,45 +415,45 @@ header nav .menu li a:hover {
 }
 
 @media (max-width: 500px) {
-  #island .cidade, #island .praias, #island .cachoeiras {
+  .container #island .cidade, .container #island .praias, .container #island .cachoeiras {
     display: -ms-grid;
     display: grid;
     place-items: center;
   }
 }
 
-#island .cidade .figura, #island .praias .figura, #island .cachoeiras .figura {
+.container #island .cidade .figura, .container #island .praias .figura, .container #island .cachoeiras .figura {
   width: 40%;
 }
 
 @media (max-width: 500px) {
-  #island .cidade .figura, #island .praias .figura, #island .cachoeiras .figura {
+  .container #island .cidade .figura, .container #island .praias .figura, .container #island .cachoeiras .figura {
     width: 90%;
   }
 }
 
-#island .cidade .figura img, #island .praias .figura img, #island .cachoeiras .figura img {
+.container #island .cidade .figura img, .container #island .praias .figura img, .container #island .cachoeiras .figura img {
   width: 100%;
   border-radius: 3%;
 }
 
-#island .cidade .text, #island .praias .text, #island .cachoeiras .text {
+.container #island .cidade .text, .container #island .praias .text, .container #island .cachoeiras .text {
   width: 60%;
   padding-left: 3%;
 }
 
 @media (max-width: 500px) {
-  #island .cidade .text, #island .praias .text, #island .cachoeiras .text {
+  .container #island .cidade .text, .container #island .praias .text, .container #island .cachoeiras .text {
     width: 90%;
     padding: 0;
   }
 }
 
-#island .cidade .text h2, #island .cidade .text h3, #island .praias .text h2, #island .praias .text h3, #island .cachoeiras .text h2, #island .cachoeiras .text h3 {
+.container #island .cidade .text h2, .container #island .cidade .text h3, .container #island .praias .text h2, .container #island .praias .text h3, .container #island .cachoeiras .text h2, .container #island .cachoeiras .text h3 {
   margin-bottom: 4%;
 }
 
-#island .cidade .text h3, #island .praias .text h3, #island .cachoeiras .text h3 {
+.container #island .cidade .text h3, .container #island .praias .text h3, .container #island .cachoeiras .text h3 {
   margin-top: 3%;
 }
 
