@@ -90,7 +90,7 @@ header{
 
             .hamburguer {
                 width: 30px;
-                background-color: whitesmoke;
+                background-color: rgba(245, 245, 245, 0.63);
             }
             
 
@@ -112,9 +112,9 @@ header{
                 position: fixed;    
                 top: -100%;
                 left: -100%;
-                width: 100px;
-                height: fit-content;
-                background-color: whitesmoke;
+                width: 50px;
+                height: 60px;
+                background-color: rgba(245, 245, 245, 0.596);
                 border-radius: 20px;
                 padding-left: 3px;
                 padding-right: 3px;
@@ -131,7 +131,7 @@ header{
                     a {
                     color: rgb(8, 8, 8);
                     padding: 3px;
-                    font-size: 1rem;
+                    font-size: 1.2rem;
                     
                     :hover {
                         background: black;
