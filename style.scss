@@ -53,11 +53,18 @@ header{
             text-align: center;        
             font-family:'Courier New', Courier, monospace;
             color: #fff;
+
+            @media(max-width: 900px){
+                position: absolute;
+                top: 43%;
+                left: 15%;                
+                width: 70%;
+            }
     
-            @media(max-width: 600px){
+            /* @media(max-width: 600px){
                 width: 50%;
                 order: 1;
-            }
+            } */
         
             :after{
                 content: '|';
@@ -78,7 +85,27 @@ header{
             /* Animação aplicada ao content referente a classe *.titulo-principal* resultando num efeito de cursor piscando. */
             
             
-        }        
+        }  
+        
+        .logo{
+            display: flex;    
+            justify-content: center;
+            align-items: start;
+            order: 1;
+            
+
+            img{
+                width: 50%;
+                margin: 0 auto;
+
+                @media(max-width: 900px){
+                    width: 40%;
+                    margin: 0 0 0 auto;
+                    background-color: #eeecec31;
+                    border-radius: 100%;
+                }
+            }
+        }
 
 
         /***MENU MOBILE ***/
