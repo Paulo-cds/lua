@@ -19,7 +19,8 @@ function abrirOuFecharMenu() {
 }
 
 function fecharMenu() {
-    menuMobile.classList.remove('aberto')
+  aberto = false
+  menuMobile.classList.remove('aberto')
 }
 
 
